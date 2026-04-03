@@ -1,0 +1,1338 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{sdesynch}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=5bf1045e1df0732b4b6e4113105fd3ce}{%
+           family={Backhoff-Veraguas},
+           familyi={B\bibinithyphendelim V\bibinitperiod},
+           given={Julio},
+           giveni={J\bibinitperiod}}}%
+        {{hash=74a4da5d811f3359c89312599e11752c}{%
+           family={Källblad},
+           familyi={K\bibinitperiod},
+           given={Sigrid},
+           giveni={S\bibinitperiod}}}%
+        {{hash=cea1cbb504150f8741c3d161f5b4dae4}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Benjamin\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3fddf4ef9952cc9d11a2320659933ccd}
+      \strng{fullhash}{3fddf4ef9952cc9d11a2320659933ccd}
+      \strng{bibnamehash}{3fddf4ef9952cc9d11a2320659933ccd}
+      \strng{authorbibnamehash}{3fddf4ef9952cc9d11a2320659933ccd}
+      \strng{authornamehash}{3fddf4ef9952cc9d11a2320659933ccd}
+      \strng{authorfullhash}{3fddf4ef9952cc9d11a2320659933ccd}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.PR}
+      \field{eprinttype}{arXiv}
+      \field{title}{Adapted Wasserstein distance between the laws of SDEs}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2209.03243
+      \endverb
+    \endentry
+    \entry{billingsley}{book}{}
+      \name{author}{1}{}{%
+        {{hash=1510894b195c898f61d6cbd12bfaf118}{%
+           family={Billingsley},
+           familyi={B\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{2}{%
+        {Wiley Series in Probability}%
+        {Statistics}%
+      }
+      \strng{namehash}{1510894b195c898f61d6cbd12bfaf118}
+      \strng{fullhash}{1510894b195c898f61d6cbd12bfaf118}
+      \strng{bibnamehash}{1510894b195c898f61d6cbd12bfaf118}
+      \strng{authorbibnamehash}{1510894b195c898f61d6cbd12bfaf118}
+      \strng{authornamehash}{1510894b195c898f61d6cbd12bfaf118}
+      \strng{authorfullhash}{1510894b195c898f61d6cbd12bfaf118}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Probability and Measure: Anniversary Edition}
+      \field{year}{2012}
+    \endentry
+    \entry{biswas}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6b0cbd8cdd90678d758aae32b12571a5}{%
+           family={Biswas},
+           familyi={B\bibinitperiod},
+           given={Niloy},
+           giveni={N\bibinitperiod}}}%
+        {{hash=cd367b2be7bf64c1563bf3d2a5584b5b}{%
+           family={Mackey},
+           familyi={M\bibinitperiod},
+           given={Lester},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab9947998e1b51fc7dba29602117a866}
+      \strng{fullhash}{ab9947998e1b51fc7dba29602117a866}
+      \strng{bibnamehash}{ab9947998e1b51fc7dba29602117a866}
+      \strng{authorbibnamehash}{ab9947998e1b51fc7dba29602117a866}
+      \strng{authornamehash}{ab9947998e1b51fc7dba29602117a866}
+      \strng{authorfullhash}{ab9947998e1b51fc7dba29602117a866}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.CO}
+      \field{month}{12}
+      \field{title}{Bounding Wasserstein distance with couplings}
+      \field{year}{2021}
+      \verb{doi}
+      \verb arXiv:2112.03152
+      \endverb
+    \endentry
+    \entry{brenier}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1e3fe385f144580370fe41358864ac8b}{%
+           family={Brenier},
+           familyi={B\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{1e3fe385f144580370fe41358864ac8b}
+      \strng{fullhash}{1e3fe385f144580370fe41358864ac8b}
+      \strng{bibnamehash}{1e3fe385f144580370fe41358864ac8b}
+      \strng{authorbibnamehash}{1e3fe385f144580370fe41358864ac8b}
+      \strng{authornamehash}{1e3fe385f144580370fe41358864ac8b}
+      \strng{authorfullhash}{1e3fe385f144580370fe41358864ac8b}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications on Pure and Applied Mathematics}
+      \field{number}{4}
+      \field{title}{Polar factorization and monotone rearrangement of vector-valued functions}
+      \field{volume}{44}
+      \field{year}{1991}
+      \field{pages}{375\bibrangedash 417}
+      \range{pages}{43}
+      \verb{doi}
+      \verb 10.1002/cpa.3160440402
+      \endverb
+    \endentry
+    \entry{handbook}{book}{}
+      \name{editor}{4}{}{%
+        {{hash=44e6b85e4b24ea984e58302c151818d6}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1938b1451109d8c94520920c35e9dce5}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Galin\bibnamedelima L.},
+           giveni={G\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=85ea5d8c6fc2be6b9cae229fdff73961}{%
+           family={Meng},
+           familyi={M\bibinitperiod},
+           given={Xiao-Li},
+           giveni={X\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Chapman \& Hall}%
+      }
+      \strng{namehash}{eb4b2cd91ad78135015c11642dac3ba9}
+      \strng{fullhash}{c5c1a7c393fe397b7645b6620903f139}
+      \strng{bibnamehash}{eb4b2cd91ad78135015c11642dac3ba9}
+      \strng{editorbibnamehash}{eb4b2cd91ad78135015c11642dac3ba9}
+      \strng{editornamehash}{eb4b2cd91ad78135015c11642dac3ba9}
+      \strng{editorfullhash}{c5c1a7c393fe397b7645b6620903f139}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{title}{Handbook of {M}arkov chain Monte Carlo}
+      \field{year}{2011}
+      \verb{doi}
+      \verb 10.1201/b10905
+      \endverb
+    \endentry
+    \entry{browniansynch}{article}{}
+      \name{author}{3}{}{%
+        {{hash=5f48a88a8f20e2a5bc17bf5070aa179c}{%
+           family={Burdzy},
+           familyi={B\bibinitperiod},
+           given={Krzysztof},
+           giveni={K\bibinitperiod}}}%
+        {{hash=05e7af9dd3c95611cf11eb0f5d67992b}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Zhen-Qing},
+           giveni={Z\bibinithyphendelim Q\bibinitperiod}}}%
+        {{hash=d23a959254577b753ce24ef9c263d07b}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Duke University Press}%
+      }
+      \strng{namehash}{59f34c155e3539022e5c7df6183e71af}
+      \strng{fullhash}{59f34c155e3539022e5c7df6183e71af}
+      \strng{bibnamehash}{59f34c155e3539022e5c7df6183e71af}
+      \strng{authorbibnamehash}{59f34c155e3539022e5c7df6183e71af}
+      \strng{authornamehash}{59f34c155e3539022e5c7df6183e71af}
+      \strng{authorfullhash}{59f34c155e3539022e5c7df6183e71af}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Illinois Journal of Mathematics}
+      \field{number}{1-4}
+      \field{title}{{Synchronous couplings of reflected Brownian motions in smooth domains}}
+      \field{volume}{50}
+      \field{year}{2006}
+      \field{pages}{189\bibrangedash 268}
+      \range{pages}{80}
+      \verb{doi}
+      \verb 10.1215/ijm/1258059475
+      \endverb
+    \endentry
+    \entry{cambanis1976}{article}{}
+      \name{author}{3}{}{%
+        {{hash=bd2628e021b3545711bdfdcce01a27cc}{%
+           family={Cambanis},
+           familyi={C\bibinitperiod},
+           given={Stamatis},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6f6fdf38c259f77fb463a43fbab516e9}{%
+           family={Simons},
+           familyi={S\bibinitperiod},
+           given={Gordon},
+           giveni={G\bibinitperiod}}}%
+        {{hash=0f3c9c8214ba01dd22f76d0ea2b9f03b}{%
+           family={Stout},
+           familyi={S\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{6b5126a6989ea9a1270f1326a78279fc}
+      \strng{fullhash}{6b5126a6989ea9a1270f1326a78279fc}
+      \strng{bibnamehash}{6b5126a6989ea9a1270f1326a78279fc}
+      \strng{authorbibnamehash}{6b5126a6989ea9a1270f1326a78279fc}
+      \strng{authornamehash}{6b5126a6989ea9a1270f1326a78279fc}
+      \strng{authorfullhash}{6b5126a6989ea9a1270f1326a78279fc}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Zeitschrift für Wahrscheinlichkeitstheorie und Verwandte Gebiete}
+      \field{number}{4}
+      \field{title}{Inequalities for Ek(X, Y) when the marginals are fixed}
+      \field{volume}{36}
+      \field{year}{1976}
+      \field{pages}{285\bibrangedash 294}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1007/BF00532695
+      \endverb
+    \endentry
+    \entry{quantile1}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c75cbe2cefd1e532f636a50892605d06}{%
+           family={Chernozhukov},
+           familyi={C\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+        {{hash=00018206993be186898211545ed16048}{%
+           family={Fernández-Val},
+           familyi={F\bibinithyphendelim V\bibinitperiod},
+           given={Iván},
+           giveni={I\bibinitperiod}}}%
+        {{hash=33d13b9928a14e05d4a5ce4d6b9ad247}{%
+           family={Galichon},
+           familyi={G\bibinitperiod},
+           given={Alfred},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The Econometric Society}%
+      }
+      \strng{namehash}{366ad094b7df6b568ee58ee4d51e2443}
+      \strng{fullhash}{366ad094b7df6b568ee58ee4d51e2443}
+      \strng{bibnamehash}{366ad094b7df6b568ee58ee4d51e2443}
+      \strng{authorbibnamehash}{366ad094b7df6b568ee58ee4d51e2443}
+      \strng{authornamehash}{366ad094b7df6b568ee58ee4d51e2443}
+      \strng{authorfullhash}{366ad094b7df6b568ee58ee4d51e2443}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{number}{3}
+      \field{title}{Quantile and Probability Curves Without Crossing}
+      \field{volume}{78}
+      \field{year}{2010}
+      \field{pages}{1093\bibrangedash 1125}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.3982/ecta7880
+      \endverb
+    \endentry
+    \entry{rearrangefunc}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8f17144c6a35d3bb5473901a351c3c1c}{%
+           family={Crowe},
+           familyi={C\bibinitperiod},
+           given={J.A.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b87e193b47ae230773a34f1445901c39}{%
+           family={Zweibel},
+           familyi={Z\bibinitperiod},
+           given={J.A.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8c7201801f59a8c205514ff52e021cb0}{%
+           family={Rosenbloom},
+           familyi={R\bibinitperiod},
+           given={P.C.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{49598d93c315bfa0038da3e1e1ac74cd}
+      \strng{fullhash}{49598d93c315bfa0038da3e1e1ac74cd}
+      \strng{bibnamehash}{49598d93c315bfa0038da3e1e1ac74cd}
+      \strng{authorbibnamehash}{49598d93c315bfa0038da3e1e1ac74cd}
+      \strng{authornamehash}{49598d93c315bfa0038da3e1e1ac74cd}
+      \strng{authorfullhash}{49598d93c315bfa0038da3e1e1ac74cd}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-1236}
+      \field{journaltitle}{Journal of Functional Analysis}
+      \field{number}{3}
+      \field{title}{Rearrangements of functions}
+      \field{volume}{66}
+      \field{year}{1986}
+      \field{pages}{432\bibrangedash 438}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1016/0022-1236(86)90067-4
+      \endverb
+    \endentry
+    \entry{independentmetropolishastings}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=b8dd237872b59cd9eb631773937e23b7}{%
+           family={Deligiannidis},
+           familyi={D\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=7888851742ea6bd4583f37c1d5aa6fd8}{%
+           family={Jacob},
+           familyi={J\bibinitperiod},
+           given={Pierre\bibnamedelima E.},
+           giveni={P\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=290c083687ebe8a5651606d482e608af}{%
+           family={Khribch},
+           familyi={K\bibinitperiod},
+           given={El\bibnamedelima Mahdi},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=a293c310799217ac471b42ab979fb854}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Guanyang},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8a624c30108dd025ae6976619edb4d90}
+      \strng{fullhash}{97512cfedb0fbc24dc2f8f245c873904}
+      \strng{bibnamehash}{8a624c30108dd025ae6976619edb4d90}
+      \strng{authorbibnamehash}{8a624c30108dd025ae6976619edb4d90}
+      \strng{authornamehash}{8a624c30108dd025ae6976619edb4d90}
+      \strng{authorfullhash}{97512cfedb0fbc24dc2f8f245c873904}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.ST}
+      \field{eprinttype}{arXiv}
+      \field{title}{On importance sampling and independent Metropolis-Hastings with an unbounded weight function}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2411.09514
+      \endverb
+    \endentry
+    \entry{iteratedranfunc}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f5a7dd4f4a0c79d2eaaf29d6dda0f4b3}{%
+           family={Diaconis},
+           familyi={D\bibinitperiod},
+           given={Persi},
+           giveni={P\bibinitperiod}}}%
+        {{hash=7396ccf082b609137d9256e7354f6228}{%
+           family={Freedman},
+           familyi={F\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{4ae041fbd5d254ea1c7fa87628ab6f49}
+      \strng{fullhash}{4ae041fbd5d254ea1c7fa87628ab6f49}
+      \strng{bibnamehash}{4ae041fbd5d254ea1c7fa87628ab6f49}
+      \strng{authorbibnamehash}{4ae041fbd5d254ea1c7fa87628ab6f49}
+      \strng{authornamehash}{4ae041fbd5d254ea1c7fa87628ab6f49}
+      \strng{authorfullhash}{4ae041fbd5d254ea1c7fa87628ab6f49}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SIAM Review}
+      \field{number}{1}
+      \field{title}{Iterated random functions}
+      \field{volume}{41}
+      \field{year}{1999}
+      \field{pages}{45\bibrangedash 76}
+      \range{pages}{32}
+      \verb{doi}
+      \verb 10.1137/S0036144598338446
+      \endverb
+    \endentry
+    \entry{durrett}{book}{}
+      \name{author}{1}{}{%
+        {{hash=175a15e34b656dab74bea645e2ed84d0}{%
+           family={Durrett},
+           familyi={D\bibinitperiod},
+           given={Rick},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{2}{%
+        {Cambridge Series in Statistical}%
+        {Probabilistic Mathematics}%
+      }
+      \strng{namehash}{175a15e34b656dab74bea645e2ed84d0}
+      \strng{fullhash}{175a15e34b656dab74bea645e2ed84d0}
+      \strng{bibnamehash}{175a15e34b656dab74bea645e2ed84d0}
+      \strng{authorbibnamehash}{175a15e34b656dab74bea645e2ed84d0}
+      \strng{authornamehash}{175a15e34b656dab74bea645e2ed84d0}
+      \strng{authorfullhash}{175a15e34b656dab74bea645e2ed84d0}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4}
+      \field{title}{Probability: Theory and Examples}
+      \field{year}{2010}
+      \verb{doi}
+      \verb 10.5555/1869916
+      \endverb
+    \endentry
+    \entry{fill2002}{inbook}{}
+      \name{author}{2}{}{%
+        {{hash=b68b941f22ea35f99369242839948dad}{%
+           family={Fill},
+           familyi={F\bibinitperiod},
+           given={James\bibnamedelima Allen},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=e5ce7ddd0871226d441ebbbdb03607a9}{%
+           family={Machida},
+           familyi={M\bibinitperiod},
+           given={Motoya},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Dordrecht}%
+      }
+      \list{publisher}{1}{%
+        {Springer Netherlands}%
+      }
+      \strng{namehash}{f41a79cea0d05dad3e4e12dabb2cbdbc}
+      \strng{fullhash}{f41a79cea0d05dad3e4e12dabb2cbdbc}
+      \strng{bibnamehash}{f41a79cea0d05dad3e4e12dabb2cbdbc}
+      \strng{authorbibnamehash}{f41a79cea0d05dad3e4e12dabb2cbdbc}
+      \strng{authornamehash}{f41a79cea0d05dad3e4e12dabb2cbdbc}
+      \strng{authorfullhash}{f41a79cea0d05dad3e4e12dabb2cbdbc}
+      \field{extraname}{1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Distributions With Given Marginals and Statistical Modelling}
+      \field{title}{Realizable Monotonicity and Inverse Probability Transform}
+      \field{year}{2002}
+      \field{pages}{63\bibrangedash 71}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1007/978-94-017-0061-0_8
+      \endverb
+    \endentry
+    \entry{fill1999}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b68b941f22ea35f99369242839948dad}{%
+           family={Fill},
+           familyi={F\bibinitperiod},
+           given={James\bibnamedelima Allen},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=e5ce7ddd0871226d441ebbbdb03607a9}{%
+           family={Machida},
+           familyi={M\bibinitperiod},
+           given={Motoya},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{f41a79cea0d05dad3e4e12dabb2cbdbc}
+      \strng{fullhash}{f41a79cea0d05dad3e4e12dabb2cbdbc}
+      \strng{bibnamehash}{f41a79cea0d05dad3e4e12dabb2cbdbc}
+      \strng{authorbibnamehash}{f41a79cea0d05dad3e4e12dabb2cbdbc}
+      \strng{authornamehash}{f41a79cea0d05dad3e4e12dabb2cbdbc}
+      \strng{authorfullhash}{f41a79cea0d05dad3e4e12dabb2cbdbc}
+      \field{extraname}{2}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Annals of Probability}
+      \field{number}{2}
+      \field{title}{Stochastic Monotonicity and Realizable Monotonicity}
+      \field{volume}{29}
+      \field{year}{1999}
+      \field{pages}{938\bibrangedash 978}
+      \range{pages}{41}
+      \verb{doi}
+      \verb 10.1214/aop/1008956698
+      \endverb
+    \endentry
+    \entry{gibbswass}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4348a41a9760c5a4e059d5e06f98e4e4}{%
+           family={Gibbs},
+           familyi={G\bibinitperiod},
+           given={Alison\bibnamedelima L.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor & Francis}%
+      }
+      \strng{namehash}{4348a41a9760c5a4e059d5e06f98e4e4}
+      \strng{fullhash}{4348a41a9760c5a4e059d5e06f98e4e4}
+      \strng{bibnamehash}{4348a41a9760c5a4e059d5e06f98e4e4}
+      \strng{authorbibnamehash}{4348a41a9760c5a4e059d5e06f98e4e4}
+      \strng{authornamehash}{4348a41a9760c5a4e059d5e06f98e4e4}
+      \strng{authorfullhash}{4348a41a9760c5a4e059d5e06f98e4e4}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stochastic Models}
+      \field{number}{4}
+      \field{title}{Convergence in the Wasserstein Metric for Markov Chain Monte Carlo Algorithms with Applications to Image Restoration}
+      \field{volume}{20}
+      \field{year}{2004}
+      \field{pages}{473\bibrangedash 492}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1081/STM-200033117
+      \endverb
+    \endentry
+    \entry{crn}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ad8512135fae00796ff8f92716d977c9}{%
+           family={Glasserman},
+           familyi={G\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=887d6e4b3578791cc51ac22a2496b818}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={David\bibnamedelima D.},
+           giveni={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c54b4e1d4fab7f7c9df5eacb2d9ae4a}
+      \strng{fullhash}{9c54b4e1d4fab7f7c9df5eacb2d9ae4a}
+      \strng{bibnamehash}{9c54b4e1d4fab7f7c9df5eacb2d9ae4a}
+      \strng{authorbibnamehash}{9c54b4e1d4fab7f7c9df5eacb2d9ae4a}
+      \strng{authornamehash}{9c54b4e1d4fab7f7c9df5eacb2d9ae4a}
+      \strng{authorfullhash}{9c54b4e1d4fab7f7c9df5eacb2d9ae4a}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Management Science}
+      \field{title}{Some guidelines and guarantees for common random numbers}
+      \field{volume}{38}
+      \field{year}{1992}
+      \field{pages}{884\bibrangedash 908}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.5555/2909967.2909978
+      \endverb
+    \endentry
+    \entry{inequalities}{book}{}
+      \name{author}{3}{}{%
+        {{hash=9d761c354d534c74e69f17afcc78fea8}{%
+           family={Hardy},
+           familyi={H\bibinitperiod},
+           given={G.\bibnamedelimi H.},
+           giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=56dd48151c55dce1b8a073ecf909a238}{%
+           family={Littlewood},
+           familyi={L\bibinitperiod},
+           given={J.\bibnamedelimi E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=85d5bb5658a4749b33270d8f0e8be228}{%
+           family={Pólya},
+           familyi={P\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge: At the University Press}%
+      }
+      \strng{namehash}{0617c4c73a627be028267696938c9c5b}
+      \strng{fullhash}{0617c4c73a627be028267696938c9c5b}
+      \strng{bibnamehash}{0617c4c73a627be028267696938c9c5b}
+      \strng{authorbibnamehash}{0617c4c73a627be028267696938c9c5b}
+      \strng{authornamehash}{0617c4c73a627be028267696938c9c5b}
+      \strng{authorfullhash}{0617c4c73a627be028267696938c9c5b}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{title}{Inequalities}
+      \field{year}{1934}
+    \endentry
+    \entry{honestexp}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b32659e5466824f8a4393b4c1875f407}{%
+           family={Hobert},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=1938b1451109d8c94520920c35e9dce5}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Galin\bibnamedelima L.},
+           giveni={G\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{2073bf929f2143a0701151e634cfc628}
+      \strng{fullhash}{2073bf929f2143a0701151e634cfc628}
+      \strng{bibnamehash}{2073bf929f2143a0701151e634cfc628}
+      \strng{authorbibnamehash}{2073bf929f2143a0701151e634cfc628}
+      \strng{authornamehash}{2073bf929f2143a0701151e634cfc628}
+      \strng{authorfullhash}{2073bf929f2143a0701151e634cfc628}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistical Science}
+      \field{number}{4}
+      \field{title}{{Honest Exploration of Intractable Probability Distributions via Markov Chain Monte Carlo}}
+      \field{volume}{16}
+      \field{year}{2001}
+      \field{pages}{312\bibrangedash 334}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1214/ss/1015346317
+      \endverb
+    \endentry
+    \entry{jacob}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7888851742ea6bd4583f37c1d5aa6fd8}{%
+           family={Jacob},
+           familyi={J\bibinitperiod},
+           given={Pierre\bibnamedelima E.},
+           giveni={P\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{7888851742ea6bd4583f37c1d5aa6fd8}
+      \strng{fullhash}{7888851742ea6bd4583f37c1d5aa6fd8}
+      \strng{bibnamehash}{7888851742ea6bd4583f37c1d5aa6fd8}
+      \strng{authorbibnamehash}{7888851742ea6bd4583f37c1d5aa6fd8}
+      \strng{authornamehash}{7888851742ea6bd4583f37c1d5aa6fd8}
+      \strng{authorfullhash}{7888851742ea6bd4583f37c1d5aa6fd8}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Available at \url{https://sites.google.com/site/pierrejacob/cmclectures?authuser=0} (2021/09/17)}
+      \field{title}{Lecture notes for couplings and Monte Carlo}
+    \endentry
+    \entry{jiangoneshotnsphereexample}{article}{}
+      \name{author}{1}{}{%
+        {{hash=eed9d6eb37395ef3fc39aef0feac0d2f}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Yunjiang},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{eed9d6eb37395ef3fc39aef0feac0d2f}
+      \strng{fullhash}{eed9d6eb37395ef3fc39aef0feac0d2f}
+      \strng{bibnamehash}{eed9d6eb37395ef3fc39aef0feac0d2f}
+      \strng{authorbibnamehash}{eed9d6eb37395ef3fc39aef0feac0d2f}
+      \strng{authornamehash}{eed9d6eb37395ef3fc39aef0feac0d2f}
+      \strng{authorfullhash}{eed9d6eb37395ef3fc39aef0feac0d2f}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Annals of Applied Probability}
+      \field{number}{4}
+      \field{title}{{Total variation bound for Kac’s random walk}}
+      \field{volume}{22}
+      \field{year}{2012}
+      \field{pages}{1712\bibrangedash 1727}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1214/11-AAP810
+      \endverb
+    \endentry
+    \entry{waslinearmixedmodels}{article}{}
+      \name{author}{2}{}{%
+        {{hash=be2f7415f2e2f5d97f4c12f742ca14e2}{%
+           family={Jin},
+           familyi={J\bibinitperiod},
+           given={Zhumengmeng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=b32659e5466824f8a4393b4c1875f407}{%
+           family={Hobert},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{5492262229d4de9822117d2aae7224b4}
+      \strng{fullhash}{5492262229d4de9822117d2aae7224b4}
+      \strng{bibnamehash}{5492262229d4de9822117d2aae7224b4}
+      \strng{authorbibnamehash}{5492262229d4de9822117d2aae7224b4}
+      \strng{authornamehash}{5492262229d4de9822117d2aae7224b4}
+      \strng{authorfullhash}{5492262229d4de9822117d2aae7224b4}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stochastic Processes and their Applications}
+      \field{title}{Dimension free convergence rates for Gibbs samplers for Bayesian linear mixed models}
+      \field{volume}{148}
+      \field{year}{2022}
+      \field{pages}{25\bibrangedash 67}
+      \range{pages}{43}
+      \verb{doi}
+      \verb 10.1016/j.spa.2022.02.003
+      \endverb
+    \endentry
+    \entry{crnconv}{article}{}
+      \name{author}{1}{}{%
+        {{hash=52eb720bc40a487743c9af8b2be6978d}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Valen\bibnamedelima E.},
+           giveni={V\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{52eb720bc40a487743c9af8b2be6978d}
+      \strng{fullhash}{52eb720bc40a487743c9af8b2be6978d}
+      \strng{bibnamehash}{52eb720bc40a487743c9af8b2be6978d}
+      \strng{authorbibnamehash}{52eb720bc40a487743c9af8b2be6978d}
+      \strng{authornamehash}{52eb720bc40a487743c9af8b2be6978d}
+      \strng{authorfullhash}{52eb720bc40a487743c9af8b2be6978d}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{title}{Studying convergence of Markov Chain Monte Carlo algorithms using coupled sample paths}
+      \field{volume}{91}
+      \field{year}{1996}
+      \field{pages}{154\bibrangedash 166}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1080/01621459.1996.10476672
+      \endverb
+    \endentry
+    \entry{strassensthm}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a21075365cd0bf4a06fcf6b5bf7ffd2b}{%
+           family={Lindvall},
+           familyi={L\bibinitperiod},
+           given={Torgny},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{a21075365cd0bf4a06fcf6b5bf7ffd2b}
+      \strng{fullhash}{a21075365cd0bf4a06fcf6b5bf7ffd2b}
+      \strng{bibnamehash}{a21075365cd0bf4a06fcf6b5bf7ffd2b}
+      \strng{authorbibnamehash}{a21075365cd0bf4a06fcf6b5bf7ffd2b}
+      \strng{authornamehash}{a21075365cd0bf4a06fcf6b5bf7ffd2b}
+      \strng{authorfullhash}{a21075365cd0bf4a06fcf6b5bf7ffd2b}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronic Communications in Probability}
+      \field{number}{none}
+      \field{title}{On Strassen's Theorem on Stochastic Domination}
+      \field{volume}{4}
+      \field{year}{1999}
+      \field{pages}{51\bibrangedash 59}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1214/ECP.v4-1005
+      \endverb
+    \endentry
+    \entry{wasandoneshot}{article}{}
+      \name{author}{2}{}{%
+        {{hash=940f79be4194da6b886888d5df15fb9b}{%
+           family={Madras},
+           familyi={M\bibinitperiod},
+           given={Neal},
+           giveni={N\bibinitperiod}}}%
+        {{hash=492f1baf9d4f9f1b3443d74f92be0deb}{%
+           family={Sezer},
+           familyi={S\bibinitperiod},
+           given={Denise},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0354e3c4d4ad13b1540600d696fce9a3}
+      \strng{fullhash}{0354e3c4d4ad13b1540600d696fce9a3}
+      \strng{bibnamehash}{0354e3c4d4ad13b1540600d696fce9a3}
+      \strng{authorbibnamehash}{0354e3c4d4ad13b1540600d696fce9a3}
+      \strng{authornamehash}{0354e3c4d4ad13b1540600d696fce9a3}
+      \strng{authorfullhash}{0354e3c4d4ad13b1540600d696fce9a3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bernoulli}
+      \field{number}{3}
+      \field{title}{Quantitative bounds for Markov chain convergence: Wasserstein and total variation distances}
+      \field{volume}{16}
+      \field{year}{2010}
+      \field{pages}{882\bibrangedash 908}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.2307/25735016
+      \endverb
+    \endentry
+    \entry{cuturi}{article}{}
+      \name{author}{2}{}{%
+        {{hash=8381a1d2d66d734a8454d63ac3344f53}{%
+           family={Peyré},
+           familyi={P\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a771427291cb72a39e026a68b102335d}{%
+           family={Cuturi},
+           familyi={C\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{031f81e8cc543b25b04a1a69bce7d466}
+      \strng{fullhash}{031f81e8cc543b25b04a1a69bce7d466}
+      \strng{bibnamehash}{031f81e8cc543b25b04a1a69bce7d466}
+      \strng{authorbibnamehash}{031f81e8cc543b25b04a1a69bce7d466}
+      \strng{authornamehash}{031f81e8cc543b25b04a1a69bce7d466}
+      \strng{authorfullhash}{031f81e8cc543b25b04a1a69bce7d466}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Foundations and Trends in Machine Learning}
+      \field{number}{5-6}
+      \field{title}{Computational Optimal Transport: With Applications to Data Science}
+      \field{volume}{11}
+      \field{year}{2019}
+      \field{pages}{355\bibrangedash 607}
+      \range{pages}{253}
+      \verb{doi}
+      \verb 10.1561/2200000073
+      \endverb
+    \endentry
+    \entry{oneshotnsphereexample}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7943aee5e69fa32ed7476d55631e3c0e}{%
+           family={Pillai},
+           familyi={P\bibinitperiod},
+           given={Natesh\bibnamedelima S.},
+           giveni={N\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=502710991404e86bdfe938f458c1b8bf}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{72b00e0ce41c82caa493a7399cb66b32}
+      \strng{fullhash}{72b00e0ce41c82caa493a7399cb66b32}
+      \strng{bibnamehash}{72b00e0ce41c82caa493a7399cb66b32}
+      \strng{authorbibnamehash}{72b00e0ce41c82caa493a7399cb66b32}
+      \strng{authornamehash}{72b00e0ce41c82caa493a7399cb66b32}
+      \strng{authorfullhash}{72b00e0ce41c82caa493a7399cb66b32}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Annals of Applied Probability}
+      \field{number}{1}
+      \field{title}{{Kac’s walk on $n$-sphere mixes in $n\log n$ steps}}
+      \field{volume}{27}
+      \field{year}{2017}
+      \field{pages}{631\bibrangedash 650}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1214/16-AAP1214
+      \endverb
+    \endentry
+    \entry{wassdnm}{article}{}
+      \name{author}{2}{}{%
+        {{hash=73e2e95b223e34fbcf25a4a22b8e59a9}{%
+           family={Qin},
+           familyi={Q\bibinitperiod},
+           given={Qian},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=b32659e5466824f8a4393b4c1875f407}{%
+           family={Hobert},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Institut Henri Poincaré}%
+      }
+      \strng{namehash}{5a1de4b915d565e82d6d3a28533c9d52}
+      \strng{fullhash}{5a1de4b915d565e82d6d3a28533c9d52}
+      \strng{bibnamehash}{5a1de4b915d565e82d6d3a28533c9d52}
+      \strng{authorbibnamehash}{5a1de4b915d565e82d6d3a28533c9d52}
+      \strng{authornamehash}{5a1de4b915d565e82d6d3a28533c9d52}
+      \strng{authorfullhash}{5a1de4b915d565e82d6d3a28533c9d52}
+      \field{extraname}{1}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annales de l'Institut Henri Poincaré, Probabilités et Statistiques}
+      \field{number}{2}
+      \field{title}{Geometric convergence bounds for Markov chains in Wasserstein distance based on generalized drift and contraction conditions}
+      \field{volume}{58}
+      \field{year}{2022}
+      \field{pages}{872\bibrangedash 889}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1214/21-AIHP1195
+      \endverb
+    \endentry
+    \entry{wasmeth}{article}{}
+      \name{author}{2}{}{%
+        {{hash=73e2e95b223e34fbcf25a4a22b8e59a9}{%
+           family={Qin},
+           familyi={Q\bibinitperiod},
+           given={Qian},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=b32659e5466824f8a4393b4c1875f407}{%
+           family={Hobert},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{5a1de4b915d565e82d6d3a28533c9d52}
+      \strng{fullhash}{5a1de4b915d565e82d6d3a28533c9d52}
+      \strng{bibnamehash}{5a1de4b915d565e82d6d3a28533c9d52}
+      \strng{authorbibnamehash}{5a1de4b915d565e82d6d3a28533c9d52}
+      \strng{authornamehash}{5a1de4b915d565e82d6d3a28533c9d52}
+      \strng{authorfullhash}{5a1de4b915d565e82d6d3a28533c9d52}
+      \field{extraname}{2}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Annals of Applied Probability}
+      \field{number}{1}
+      \field{title}{Wasserstein-based methods for convergence complexity analysis of MCMC with applications}
+      \field{volume}{32}
+      \field{year}{2022}
+      \field{pages}{124\bibrangedash 166}
+      \range{pages}{43}
+      \verb{doi}
+      \verb 10.1214/21-AAP1673
+      \endverb
+    \endentry
+    \entry{raj}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=d3867ff0469c3dd0628a2f03c1c8f837}{%
+           family={Rajaratnam},
+           familyi={R\bibinitperiod},
+           given={Bala},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a73e2c5aa81d04e3e3e126eef9427136}{%
+           family={Sparks},
+           familyi={S\bibinitperiod},
+           given={Doug},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{22e32a5960a5effd4f12517743c193bf}
+      \strng{fullhash}{22e32a5960a5effd4f12517743c193bf}
+      \strng{bibnamehash}{22e32a5960a5effd4f12517743c193bf}
+      \strng{authorbibnamehash}{22e32a5960a5effd4f12517743c193bf}
+      \strng{authornamehash}{22e32a5960a5effd4f12517743c193bf}
+      \strng{authorfullhash}{22e32a5960a5effd4f12517743c193bf}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.ST}
+      \field{eprinttype}{arXiv}
+      \field{title}{MCMC-Based inference in the era of big data: a fundamental analysis of the convergence complexity of high-dimensional chains}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1508.00947
+      \endverb
+    \endentry
+    \entry{oneshot}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2a3eb35b3da51a4b9368077a5552166e}{%
+           family={Roberts},
+           familyi={R\bibinitperiod},
+           given={Gareth\bibnamedelima O.},
+           giveni={G\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=ebb205999cd9bd45ba28fd1c37b17c6e}{%
+           family={Rosenthal},
+           familyi={R\bibinitperiod},
+           given={Jeffrey\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{53c5d14fcb510976fadcbc217ee583dd}
+      \strng{fullhash}{53c5d14fcb510976fadcbc217ee583dd}
+      \strng{bibnamehash}{53c5d14fcb510976fadcbc217ee583dd}
+      \strng{authorbibnamehash}{53c5d14fcb510976fadcbc217ee583dd}
+      \strng{authornamehash}{53c5d14fcb510976fadcbc217ee583dd}
+      \strng{authorfullhash}{53c5d14fcb510976fadcbc217ee583dd}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Stochastic Processes and their Applications}
+      \field{title}{One-shot coupling for certain stochastic recursive sequences}
+      \field{volume}{99}
+      \field{year}{2002}
+      \field{pages}{195\bibrangedash 208}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/S0304-4149(02)00096-0
+      \endverb
+    \endentry
+    \entry{firstlook}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ebb205999cd9bd45ba28fd1c37b17c6e}{%
+           family={Rosenthal},
+           familyi={R\bibinitperiod},
+           given={Jeffrey\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific}%
+      }
+      \strng{namehash}{ebb205999cd9bd45ba28fd1c37b17c6e}
+      \strng{fullhash}{ebb205999cd9bd45ba28fd1c37b17c6e}
+      \strng{bibnamehash}{ebb205999cd9bd45ba28fd1c37b17c6e}
+      \strng{authorbibnamehash}{ebb205999cd9bd45ba28fd1c37b17c6e}
+      \strng{authornamehash}{ebb205999cd9bd45ba28fd1c37b17c6e}
+      \strng{authorfullhash}{ebb205999cd9bd45ba28fd1c37b17c6e}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{A First Look at Rigorous Probability Theory}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.1142/6300
+      \endverb
+    \endentry
+    \entry{santambrogio}{article}{}
+      \name{author}{1}{}{%
+        {{hash=deb5f5e08d40c7c61a19403771acf3c3}{%
+           family={Santambrogio},
+           familyi={S\bibinitperiod},
+           given={Filippo},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Birkauser}%
+      }
+      \strng{namehash}{deb5f5e08d40c7c61a19403771acf3c3}
+      \strng{fullhash}{deb5f5e08d40c7c61a19403771acf3c3}
+      \strng{bibnamehash}{deb5f5e08d40c7c61a19403771acf3c3}
+      \strng{authorbibnamehash}{deb5f5e08d40c7c61a19403771acf3c3}
+      \strng{authornamehash}{deb5f5e08d40c7c61a19403771acf3c3}
+      \strng{authorfullhash}{deb5f5e08d40c7c61a19403771acf3c3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{title}{Optimal Transport for Applied Mathematicians. Calculus of Variations, PDEs and Modeling}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1007/978-3-319-20828-2
+      \endverb
+    \endentry
+    \entry{equimeasurable2}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8eaee9f7b55db49808ec0cfec4b85677}{%
+           family={Savoye},
+           familyi={S\bibinitperiod},
+           given={Philip},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Rocky Mountain Mathematics Consortium}%
+      }
+      \strng{namehash}{8eaee9f7b55db49808ec0cfec4b85677}
+      \strng{fullhash}{8eaee9f7b55db49808ec0cfec4b85677}
+      \strng{bibnamehash}{8eaee9f7b55db49808ec0cfec4b85677}
+      \strng{authorbibnamehash}{8eaee9f7b55db49808ec0cfec4b85677}
+      \strng{authornamehash}{8eaee9f7b55db49808ec0cfec4b85677}
+      \strng{authorfullhash}{8eaee9f7b55db49808ec0cfec4b85677}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Rocky Mountain Journal of Mathematics}
+      \field{number}{1}
+      \field{title}{Equimeasurable Rearragnements of Functions and Fourth Order Boundary Value Problems}
+      \field{urlday}{21}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{26}
+      \field{year}{1996}
+      \field{urldateera}{ce}
+      \field{pages}{281\bibrangedash 293}
+      \range{pages}{13}
+    \endentry
+    \entry{equimeasurable}{article}{}
+      \name{author}{1}{}{%
+        {{hash=8fc2f5c25ebdbe635ef9672b68812a68}{%
+           family={Schwarz},
+           familyi={S\bibinitperiod},
+           given={Binyamin},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Indiana University Mathematics Department}%
+      }
+      \strng{namehash}{8fc2f5c25ebdbe635ef9672b68812a68}
+      \strng{fullhash}{8fc2f5c25ebdbe635ef9672b68812a68}
+      \strng{bibnamehash}{8fc2f5c25ebdbe635ef9672b68812a68}
+      \strng{authorbibnamehash}{8fc2f5c25ebdbe635ef9672b68812a68}
+      \strng{authornamehash}{8fc2f5c25ebdbe635ef9672b68812a68}
+      \strng{authorfullhash}{8fc2f5c25ebdbe635ef9672b68812a68}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Mathematics and Mechanics}
+      \field{number}{3}
+      \field{title}{On the Extrema of the Frequencies of Nonhomogeneous Strings with Equimeasurable Density}
+      \field{urlday}{21}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{10}
+      \field{year}{1961}
+      \field{urldateera}{ce}
+      \field{pages}{401\bibrangedash 422}
+      \range{pages}{22}
+    \endentry
+    \entry{sixta}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a1f5557a9b205dfa35b8bbe03fc2e7ac}{%
+           family={Sixta},
+           familyi={S\bibinitperiod},
+           given={Sabrina},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ebb205999cd9bd45ba28fd1c37b17c6e}{%
+           family={Rosenthal},
+           familyi={R\bibinitperiod},
+           given={Jeffrey\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{af9f71dddc5ce8150e5d02a5ce12eab5}
+      \strng{fullhash}{af9f71dddc5ce8150e5d02a5ce12eab5}
+      \strng{bibnamehash}{af9f71dddc5ce8150e5d02a5ce12eab5}
+      \strng{authorbibnamehash}{af9f71dddc5ce8150e5d02a5ce12eab5}
+      \strng{authornamehash}{af9f71dddc5ce8150e5d02a5ce12eab5}
+      \strng{authorfullhash}{af9f71dddc5ce8150e5d02a5ce12eab5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistics and Computing}
+      \field{number}{71}
+      \field{title}{Convergence rate bounds for iterative random functions using one-shot coupling}
+      \field{volume}{32}
+      \field{year}{2022}
+      \field{pages}{1573\bibrangedash 1375}
+      \range{pages}{-197}
+      \verb{doi}
+      \verb 10.1007/s11222-022-10134-x
+      \endverb
+    \endentry
+    \entry{sixtacrn}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a1f5557a9b205dfa35b8bbe03fc2e7ac}{%
+           family={Sixta},
+           familyi={S\bibinitperiod},
+           given={Sabrina},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ebb205999cd9bd45ba28fd1c37b17c6e}{%
+           family={Rosenthal},
+           familyi={R\bibinitperiod},
+           given={Jeffrey\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=f9733f36d18965f355b7107e7abd93cc}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Austin},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{2acdeb81d6e2969f48c99ae5b4fc09f1}
+      \strng{fullhash}{2acdeb81d6e2969f48c99ae5b4fc09f1}
+      \strng{bibnamehash}{2acdeb81d6e2969f48c99ae5b4fc09f1}
+      \strng{authorbibnamehash}{2acdeb81d6e2969f48c99ae5b4fc09f1}
+      \strng{authornamehash}{2acdeb81d6e2969f48c99ae5b4fc09f1}
+      \strng{authorfullhash}{2acdeb81d6e2969f48c99ae5b4fc09f1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.CO}
+      \field{eprinttype}{arXiv}
+      \field{title}{Estimating MCMC convergence rates using common random number simulations}
+      \field{year}{2025}
+      \verb{eprint}
+      \verb 2309.15735
+      \endverb
+    \endentry
+    \entry{localcont}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c24be2205647d8eb08593fb5f8aab4b1}{%
+           family={Steinsaltz},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{c24be2205647d8eb08593fb5f8aab4b1}
+      \strng{fullhash}{c24be2205647d8eb08593fb5f8aab4b1}
+      \strng{bibnamehash}{c24be2205647d8eb08593fb5f8aab4b1}
+      \strng{authorbibnamehash}{c24be2205647d8eb08593fb5f8aab4b1}
+      \strng{authornamehash}{c24be2205647d8eb08593fb5f8aab4b1}
+      \strng{authorfullhash}{c24be2205647d8eb08593fb5f8aab4b1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annals of Probability}
+      \field{number}{4}
+      \field{title}{Locally Contractive Iterated Function Systems}
+      \field{volume}{27}
+      \field{year}{1999}
+      \field{pages}{1952\bibrangedash 1979}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1214/aop/1022874823
+      \endverb
+    \endentry
+    \entry{avcont}{article}{}
+      \name{author}{1}{}{%
+        {{hash=b3a64c55c31bdd65b821d4a9ec1b2e95}{%
+           family={Stenflo},
+           familyi={S\bibinitperiod},
+           given={Örjan},
+           giveni={Ö\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3a64c55c31bdd65b821d4a9ec1b2e95}
+      \strng{fullhash}{b3a64c55c31bdd65b821d4a9ec1b2e95}
+      \strng{bibnamehash}{b3a64c55c31bdd65b821d4a9ec1b2e95}
+      \strng{authorbibnamehash}{b3a64c55c31bdd65b821d4a9ec1b2e95}
+      \strng{authornamehash}{b3a64c55c31bdd65b821d4a9ec1b2e95}
+      \strng{authorfullhash}{b3a64c55c31bdd65b821d4a9ec1b2e95}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Difference Equations and Applications}
+      \field{number}{8}
+      \field{title}{A Survey of Average Contractive Iterated Function Systems}
+      \field{volume}{18}
+      \field{year}{2012}
+      \field{pages}{1355\bibrangedash 1380}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1080/10236198.2011.610793
+      \endverb
+    \endentry
+    \entry{villani}{book}{}
+      \name{author}{1}{}{%
+        {{hash=9a5829eabef68d560b86bf71527fd874}{%
+           family={Villani},
+           familyi={V\bibinitperiod},
+           given={Cédric},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{9a5829eabef68d560b86bf71527fd874}
+      \strng{fullhash}{9a5829eabef68d560b86bf71527fd874}
+      \strng{bibnamehash}{9a5829eabef68d560b86bf71527fd874}
+      \strng{authorbibnamehash}{9a5829eabef68d560b86bf71527fd874}
+      \strng{authornamehash}{9a5829eabef68d560b86bf71527fd874}
+      \strng{authorfullhash}{9a5829eabef68d560b86bf71527fd874}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{title}{Optimal Transport: Old and New}
+      \field{year}{2008}
+      \verb{doi}
+      \verb 10.1007/978-3-540-71050-9
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

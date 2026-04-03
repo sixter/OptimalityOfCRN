@@ -1,0 +1,1204 @@
+---
+title: "Optimality of CRN"
+author: "Sabrina"
+date: "2025-12-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(latex2exp)
+library(viridis)
+```
+
+## Random Logistics Map
+Suppose we start with initial values $X_0=\frac{1}{2}$ and $X_0=\frac{1}{4}$. Then we get the following 
+```{r}
+n <- 10^5
+# Paremeters for beta distribution
+alpha <- 1 # alpha>1/2
+a <- alpha+1/2
+b <- alpha-1/2
+U <- runif(n)
+hist(qbeta(U,a,b))
+```
+```{r}
+X0 <- 1/2
+Y0 <- 1/8
+curve(x*(1-x), from=0, to=1, , xlab=TeX("$B_1$"), ylab=TeX("$X_2=4B_2 B_1(1-B_1)$"))
+```
+```{r}
+par(mfrow = c(2, 2))
+# curve(x*(1-x), from=0, to=1, xaxt = "n", yaxt = "n", xlab=TeX("$B_1$"), ylab=TeX("$X_2$"), main=TeX("$X_2=4 B_1(1-B_1)$"))
+# axis(side=1, at=c(0,0.25,0.5,0.75, 1))
+# axis(side=2, at=c(0,0.125, 0.25))
+f_X1 <- function(x){
+  y= ifelse(
+    x <= 0.5,
+    x * (1 - x),
+    (x - 0.5) * (1 - (x - 0.5))
+  )
+  return(y)
+}
+# lines(curve(x*(1-x), from = 0.5001, to = 1, add = TRUE)$x, 
+#       curve(x*(1-x), from = 0.5001, to = 1, add = TRUE)$y, col = "blue")
+# lines(curve(f_X1, from = 0.5001, to = 1, add = TRUE)$x, 
+#       curve(f_X1, from = 0.5001, to = 1, add = TRUE)$y, col = "red")
+
+curve(x*(1-x), from=0, to=1, xlim = c(0,1), n=1000, xaxt = "n", yaxt = "n", xlab=TeX("$B_1$"), ylab=TeX("$X_2$"))
+#plot(f_X1, from=0, to=0.5, xlim = c(0,1), xlab=TeX("$B_1$"), ylab=TeX("$X_2=4 g(B_1)(1-g(B_1))$"))
+axis(side=1, at=c(0,0.25,0.5,0.75, 1))
+axis(side=2, at=c(0,0.125, 0.25))
+lines(curve(f_X1, from = 0.5001, to = 1, add = TRUE)$x, 
+      curve(f_X1, from = 0.5001, to = 1, add = TRUE)$y, col='red')
+abline(v = 0.5, lty = 2)
+text(x = 0.63, y = 0.01, labels = TeX("$X'_2(U)=4 F^{-1}_{\\beta}(g(U))(1-F^{-1}_{\\beta}(g(U)))$"), col = "red", cex = 0.75)
+text(x = 0.1, y = 0.01, labels = TeX("$X_2=4 F^{-1}_{\\beta}(U)(1-F^{-1}_{\\beta}(U))$"), cex = 0.75)
+
+f_pbeta <- function(x){
+  y= pbeta(x,shape1=2.5, shape2=1.5, )
+  return(y)
+}
+
+plot.new()
+
+curve(f_pbeta, from=0, to=1, xlim = c(0,1), n=1000, xaxt = "n", yaxt = "n", xlab=TeX("$B_1$"), ylab=TeX("$U_1$"))
+#plot(f_X1, from=0, to=0.5, xlim = c(0,1), xlab=TeX("$B_1$"), ylab=TeX("$X_2=4 g(B_1)(1-g(B_1))$"))
+axis(side=1, at=c(0,0.25,0.5,0.75, 1))
+axis(side=2, at=c(0,0.288, 1))
+lines(curve(1+f_pbeta(0.5)-f_pbeta(x), from = 0.5001, to = 1, add = TRUE)$x, 
+      curve(1+f_pbeta(0.5)-f_pbeta(x), from = 0.5001, to = 1, add = TRUE)$y, col='red')
+abline(h = 0.288, lty = 2)
+abline(v = 0.5, lty = 2)
+text(x = 0.63, y = 0.01, labels = TeX("$X'_2(U)=4 F^{-1}_{\\beta}(g(U))(1-F^{-1}_{\\beta}(g(U)))$"), col = "red", cex = 0.75)
+text(x = 0.1, y = 0.01, labels = TeX("$X_2=4 F^{-1}_{\\beta}(U)(1-F^{-1}_{\\beta}(U))$"), cex = 0.75)
+
+curve(x+1-1, from=0, to=1, xlim = c(0,1), n=1000, xaxt = "n", yaxt = "n", xlab=TeX("$U_1$"), ylab=TeX("$g(U_1)$"))
+#plot(f_X1, from=0, to=0.5, xlim = c(0,1), xlab=TeX("$B_1$"), ylab=TeX("$X_2=4 g(B_1)(1-g(B_1))$"))
+axis(side=1, at=c(0,0.25,0.5,0.75, 1))
+axis(side=2, at=c(0,0.288, 1))
+lines(curve(1+f_pbeta(0.5)-x, from = f_pbeta(0.5), to = 1, add = TRUE)$x, 
+      curve(1+f_pbeta(0.5)-x, from = f_pbeta(0.5), to = 1, add = TRUE)$y, col='red')
+abline(h = 0.288, lty = 2)
+abline(v = 0.288, lty = 2)
+text(x = 0.45, y = 0.97, labels = TeX("$g(U)=1+F^{-1}_{\\beta}(0.5)-U$"), col = "red", cex = 0.75)
+text(x = 0.07, y = 0.01, labels = TeX("$g(U)=U$"), cex = 0.75)
+```
+
+```{r}
+layout(matrix(c(1, 0,
+                2, 3), nrow = 2, byrow = TRUE))
+
+par(
+  mar = c(4, 4, 2, 1),
+  oma = c(0, 0, 2, 0),
+  cex = 0.9,
+  lwd = 1.3,
+  family = "serif"
+)
+
+f_X1 <- function(x) {
+  ifelse(
+    x <= 0.5,
+    x * (1 - x),
+    (x - 0.5) * (1 - (x - 0.5))
+  )
+}
+
+f_pbeta <- function(x) pbeta(x, 2.5, 1.5)
+
+c0 <- f_pbeta(0.5)
+
+curve(
+  x * (1 - x),
+  from = 0, to = 1,
+  xlab = TeX("$B_1$"),
+  ylab = TeX("$X_2$"),
+  xaxt = "n", yaxt = "n"
+)
+axis(1, at = c(0, 0.5, 1))
+axis(2)
+
+curve(f_X1, from = 0.5001, to = 1, add = TRUE, col = "red")
+abline(v = 0.5, lty = 2)
+
+mtext("(A)", side = 3, adj = 0, line = 0.3)
+
+curve(
+  f_pbeta,
+  from = 0, to = 1,
+  xlab = TeX("$B_1$"),
+  ylab = TeX("$U_1$"),
+  xaxt = "n", yaxt = "n"
+)
+axis(1, at = c(0, 0.5, 1))
+axis(2)
+
+curve(
+  f_pbeta(1 + 0.5 - x),
+  from = 0.5, to = 1,
+  add = TRUE,
+  col = "red"
+)
+
+abline(v = 0.5, lty = 2)
+abline(h = c0, lty = 2)
+
+mtext("(B)", side = 3, adj = 0, line = 0.3)
+
+curve(
+  1*x,
+  from = 0, to = 1,
+  xlab = TeX("$U_1$"),
+  ylab = TeX("$g(U_1)$"),
+  xaxt = "n", yaxt = "n"
+)
+axis(1, at = c(0, 0.288, 1))
+axis(2)
+
+curve(
+  1 + c0 - x,
+  from = c0, to = 1,
+  add = TRUE,
+  col = "red"
+)
+
+abline(v = c0, lty = 2)
+abline(h = c0, lty = 2)
+
+mtext("(C)", side = 3, adj = 0, line = 0.3)
+
+
+```
+# Generate equimeasurable mapping of X_2
+
+```{r}
+alpha <- 2
+h <- function(u, xi, a, b, t) {
+  stopifnot(length(u) == length(xi))
+  
+  y <- u  # default: unchanged
+  
+  inside <- (u > a) & (u < b)
+  
+  idx1 <- inside & (xi == 1)
+  idx0 <- inside & (xi != 1)
+  
+  y[idx1] <- (u[idx1] - a) / (b - a) * (t - a) + a
+  y[idx0] <- (u[idx0] - a) / (b - a) * (b - t) + t
+  
+  return(y)
+}
+
+g <- function(u, a, b) {
+  y <- u                      # default: unchanged
+  idx <- (u > a) & (u < b)    # elements inside (a,b)
+  y[idx] <- a + b - u[idx]    # reflect inside (a,b)
+  y
+}
+
+f_X2 <- function(B1,B2){
+  return(4*B2*B1*(1-B1))
+}
+
+gen_X2 <- function(u,xi, B2,t){
+  a <- 0
+  b <- 1
+  #t <- pbeta(0.5, 2.5, 1.5)
+  B1 <- qbeta(g(h(u,xi,a,b,t),t,1),alpha + 0.5,alpha-0.5)
+  X2 <- f_X2(B1,B2)
+  return(X2)
+}
+
+# f_Y2 <- function(B1,B2){
+#   return(3*B2*B1*(1-0.75*B1))
+# }
+# 
+# gen_Y2 <- function(u,xi, B2,t){
+#   a <- 0
+#   b <- 1
+#   #t <- pbeta(0.5, 2.5, 1.5)
+#   B1 <- qbeta(g(h(u,xi,a,b,t),t,1),alpha + 0.5,alpha-0.5)
+#   Y2 <- f_Y2(B1,B2)
+#   return(Y2)
+# }
+
+f_Y2 <- function(B1,B2){
+  return(7/4*B2*B1*(1-7/16*B1))
+}
+
+# gen_Y2 <- function(u,xi, B2,t){
+#   a <- 0
+#   b <- 1
+#   #t <- pbeta(0.5, 2.5, 1.5)
+#   B1 <- qbeta(g(h(u,xi,a,b,t),t,1),alpha + 0.5,alpha-0.5)
+#   Y2 <- f_Y2(B1,B2)
+#   return(Y2)
+# }
+
+```
+
+
+```{r}
+alpha <- 1
+n <- 100000
+# Creating X2, X22
+
+t <- pbeta(0.5, alpha + 0.5,alpha-0.5)
+u <- runif(n)
+xi <- as.numeric(rbernoulli(n,t))
+B2 <- rbeta(n, alpha + 0.5,alpha-0.5)
+X2 <- gen_X2(u,xi,B2,t)
+
+
+B1 <- rbeta(n, alpha + 0.5,alpha-0.5)
+B2 <- rbeta(n, alpha + 0.5,alpha-0.5)
+X22 <- f_X2(B1,B2)
+
+# Creating Y22
+B1 <- rbeta(n, alpha + 0.5,alpha-0.5)
+B2 <- rbeta(n, alpha + 0.5,alpha-0.5)
+Y22 <- f_Y2(B1,B2)
+```
+
+```{r}
+plot_densities <- function(Y2, Y22,label1,label2) {
+  d1 <- density(Y2,  from = 0, to = 1)
+  d2 <- density(Y22, from = 0, to = 1)
+
+  plot(
+    d1,
+    type = "n",
+    xlab = expression(x),
+    ylab = "Density",
+    main = "",
+    ylim = c(0, max(d1$y, d2$y))
+  )
+
+  polygon(
+    c(d1$x, rev(d1$x)),
+    c(d1$y, rep(0, length(d1$y))),
+    col = rgb(0.2, 0.4, 0.8, 0.1),
+    border = NA
+  )
+
+  polygon(
+    c(d2$x, rev(d2$x)),
+    c(d2$y, rep(0, length(d2$y))),
+    col = rgb(0.1, 0.6, 0.3, 0.1),
+    border = NA
+  )
+
+  lines(d1, lwd = 2, col = rgb(0.2, 0.4, 0.8, 0.9))
+  lines(d2, lwd = 2, col = rgb(0.1, 0.6, 0.3, 0.9), lty = 2)
+
+  legend(
+    "topright",
+    #legend = c(TeX("$Y''_2$"), TeX("$Y_2$")),
+    legend = c(TeX(label1), TeX(label2)),
+    fill = c(rgb(0.2,0.4,0.8,0.35),
+             rgb(0.1,0.6,0.3,0.35)),
+    border = NA,
+    bty = "n"
+  )
+}
+```
+
+```{r}
+par(
+  mfrow = c(2, 1),
+  mar = c(2, 4, 1.5, 1),
+  oma = c(0, 0, 0, 0)
+)
+
+plot_densities(X2,  X22, "$X''_2$", "$X_2$")
+mtext("(A)", side = 3, adj = 0, line = 0.3)
+# plot_densities(Y2,  Y22, "$Y''_2$", "$Y_2$")
+# mtext("(B)", side = 3, adj = 0, line = 0.3)
+plot_densities(X22, Y22, "$X_2$",   "$Y_2$")
+mtext("(B)", side = 3, adj = 0, line = 0.3)
+
+```
+
+```{r}
+n <- 10000
+alpha <- 1
+B1 <- rbeta(n, alpha + 0.5, alpha-0.5)
+B2 <- rbeta(n, alpha + 0.5, alpha-0.5)
+X22 <- f_X2(B1,B2)
+Y22 <- f_Y2(B1,B2)
+mean(abs(X22-Y22))
+
+# Creating X2, X22
+t <- pbeta(0.5, alpha + 0.5, alpha-0.5)
+u <- runif(n)
+xi <- rbernoulli(n, t)
+B2 <- rbeta(n, alpha + 0.5, alpha-0.5)
+B1 <- qbeta(u, alpha+1/2, alpha-1/2)
+
+X2 <- gen_X2(u,xi,B2,t)
+Y2 <- f_Y2(B1,B2)
+
+mean(abs(X2-Y2))
+```
+```{r}
+n <- 50000
+alpha_vals <- 1:10   # choose whatever grid you want
+
+# storage
+results <- data.frame(
+  alpha = alpha_vals,
+  CRN = NA,
+  min   = NA
+)
+
+for (i in seq_along(alpha_vals)) {
+  
+  alpha <- alpha_vals[i]
+  
+  ## ---------- X22 and Y22 ----------
+  B1 <- rbeta(n, alpha + 0.5, alpha - 0.5)
+  B2 <- rbeta(n, alpha + 0.5, alpha - 0.5)
+  
+  X22 <- f_X2(B1, B2)
+  Y22 <- f_Y2(B1, B2)
+  
+  results$CRN[i] <- mean(abs(X22 - Y22))
+  
+  ## ---------- X2 and Y2 ----------
+  t_X <- pbeta(0.5, alpha + 0.5, alpha - 0.5)
+  t_Y <- pbeta(2/3, alpha + 0.5, alpha - 0.5)
+  
+  u    <- runif(n)
+  u_xi <- runif(n)
+  B2   <- rbeta(n, alpha + 0.5, alpha - 0.5)
+  B1   <- qbeta(u, alpha + 0.5, alpha - 0.5)
+  
+  xi_X <- ifelse(u_xi < t_X, 1, 0)
+  xi <- as.numeric(rbernoulli(n,t_X))
+  #xi_Y <- ifelse(u < t_Y, 1, 0)
+  
+  X2 <- gen_X2(u, xi_X, B2, t)
+  #Y2 <- gen_Y2(u, xi_Y, B2, t)
+  Y2 <- f_Y2(B1, B2)
+  
+  results$min[i] <- mean(abs(X2 - Y2))
+}
+
+results
+```
+
+
+
+```{r}
+results %>%
+  pivot_longer(
+    !alpha,
+    names_to  = "Simulation",
+    values_to = "Value"
+  ) %>%
+  ggplot(aes(
+    x        = alpha,
+    y        = Value,
+    linetype = Simulation
+  )) +
+  geom_line(
+    linewidth = 0.9,
+    colour   = "black"
+  ) +
+  labs(
+    x        = expression(alpha),
+    y        = TeX("$E[|X_2 - Y_2|]$"),
+    linetype = "Simulation type"
+  ) +
+  scale_linetype_manual(
+    values = c("solid", "dotdash"),
+    labels = c(
+      TeX("(A) CRN of $|X_2-Y_2|$"),
+      TeX("(B) CRN of $|X''_2-Y_2|$")
+    )
+  ) +
+  scale_x_continuous(
+    breaks = scales::pretty_breaks(5)
+  ) +
+  theme_classic(base_size = 12) +
+  theme(
+    legend.position = "bottom",
+    legend.title    = element_text(size = 10),
+    legend.text     = element_text(size = 9),
+    axis.title      = element_text(size = 11),
+    axis.text       = element_text(size = 10)
+  )
+
+```
+```{r}
+results %>%
+  pivot_longer(
+    !alpha,
+    names_to  = "Simulation",
+    values_to = "Value"
+  ) %>%
+  ggplot(aes(
+    x        = alpha,
+    y        = Value,
+    linetype = Simulation
+  )) +
+  geom_line(
+    linewidth = 0.9,
+    colour   = "black"
+  ) +
+  geom_point(
+    shape  = 21,
+    size   = 2,
+    stroke = 0.6,
+    fill   = "white"
+  ) +
+  labs(
+    x        = expression(alpha),
+    y        = TeX("$E[|X_2 - Y_2|]$"),
+    linetype = "Simulation type"
+  ) +
+  scale_linetype_manual(
+    values = c("solid", "dashed"),
+    labels = c(
+      TeX("(A) CRN of $|X_2-Y_2|$"),
+      TeX("(B) CRN of $|X''_2-Y_2|$")
+    )
+  ) +
+  scale_x_continuous(
+    breaks = scales::pretty_breaks(5)
+  ) +
+  theme_classic(base_size = 12) +
+  theme(
+    legend.position = "bottom",
+    legend.title    = element_text(size = 10),
+    legend.text     = element_text(size = 9),
+    axis.title      = element_text(size = 11),
+    axis.text       = element_text(size = 10)
+  )
+```
+
+
+```{r}
+u <- seq(0.01, 0.99, 0.01)
+n <- length(u)
+alpha <- 1
+X2_1 <- gen_X2(u, rep(1, n), 1, t)
+X2_0 <- gen_X2(u, rep(0, n), 1, t)
+
+# Plot first curve
+plot(
+  u, X2_1,
+  type = "l",
+  lwd = 2,
+  col = "blue",
+  xlab = "u",
+  ylab = "X2",
+  ylim = range(c(X2_0, X2_1))
+)
+
+# Add second curve
+lines(
+  u, X2_0,
+  lwd = 2,
+  col = "red",
+  lty = 2
+)
+
+# Legend
+legend(
+  "bottomright",
+  legend = c(TeX("$X''(B_2,U_1,1)$"), TeX("$X''(B_2,U_1,0)$")),
+  col = c("blue", "red"),
+  lwd = 2,
+  lty = c(1, 2),
+  bty = "n"
+)
+```
+```{r}
+u <- seq(0.01, 0.99, 0.01)
+n <- length(u)
+alphas <- 1:10
+
+par(mfrow = c(5, 2), mar = c(1, 1, 2, 1))
+
+for (alpha in alphas) {
+  X2_1 <- gen_X2(u, rep(1, n), alpha, t)
+  X2_0 <- gen_X2(u, rep(0, n), alpha, t)
+
+  plot(
+    u, X2_1,
+    type = "l",
+    lwd = 2,
+    col = "blue",
+    ylim = range(c(X2_0, X2_1)),
+    main = paste("alpha =", alpha),
+    xlab = "u",
+    ylab = "X2"
+  )
+
+  lines(u, X2_0, col = "red", lwd = 2, lty = 2)
+}
+
+par(mfrow = c(1, 1))
+
+```
+
+```{r}
+# Calculating the interval of A
+X0 <- 1/2
+Y0 <- 1/4
+a1 <- 1/(8*X0*(1-X0))
+a2 <- 1/(8*Y0*(1-Y0))
+li <- pbeta(min(a1,a2),a,b)
+ui <- pbeta(min(1,max(a1,a2)),a,b)
+li
+ui
+```
+```{r}
+U <- runif(n,0,1)
+V <- U
+for(i in 1:length(U)){
+  if ((li < U[i]) & (U[i] <ui)){
+  V[i] <- li +(1-(U[i]-li)/(ui-li))*(ui-li)
+  } else{
+    V[i] <- U[i]
+  } 
+}
+B11 <- qbeta(U,a,b)
+B12 <- qbeta(V,a,b)
+hist(U)
+hist(V)
+hist(qbeta(U,a,b), main = paste("Histogram of B11"))
+hist(qbeta(V,a,b), main = paste("Histogram of B12"))
+```
+```{r}
+#Simulated minimized expected distance 
+U <- runif(n,0,1)
+V <- U
+for(i in 1:length(U)){
+  if ((li < U[i]) & (U[i] <ui)){
+  V[i] <- li +(1-(U[i]-li)/(ui-li))*(ui-li)
+  } else{
+    V[i] <- U[i]
+  } 
+}
+B1X <- qbeta(U,a,b)
+B1Y <- qbeta(V,a,b)
+
+B2 <- rbeta(n, a,b)
+X <- 16*B2*B1X*X0*(1-X0)*(1-4*B1X*X0*(1-X0))
+Y <- 16*B2*B1Y*Y0*(1-Y0)*(1-4*B1Y*Y0*(1-Y0))
+
+mean((X-Y)^2)
+```
+```{r}
+# Simulated expected distance using CRN
+B1 <- rbeta(n, a,b)
+B2 <- rbeta(n, a,b)
+X <- 16*B2*B1*X0*(1-X0)*(1-4*B1*X0*(1-X0))
+Y <- 16*B2*B1*Y0*(1-Y0)*(1-4*B1*Y0*(1-Y0))
+mean((X-Y)^2)
+```
+```{r}
+getExpDist_CRN <- function(n,alpha, X0,Y0){
+  a <- alpha+1/2
+  b <- alpha-1/2
+  B1 <- rbeta(n, a,b)
+  B2 <- rbeta(n, a,b)
+  X <- 16*B2*B1*X0*(1-X0)*(1-4*B1*X0*(1-X0))
+  Y <- 16*B2*B1*Y0*(1-Y0)*(1-4*B1*Y0*(1-Y0))
+  mean((X-Y)^2)
+}
+
+getExpDist_min <- function(n,alpha, X0,Y0){
+  a <- alpha+1/2
+  b <- alpha-1/2
+  
+  a1 <- 1/(8*X0*(1-X0))
+  a2 <- 1/(8*Y0*(1-Y0))
+  li <- pbeta(min(a1,a2),a,b)
+  ui <- pbeta(min(1,max(a1,a2)),a,b)
+  li
+  ui
+
+  U <- runif(n,0,1)
+  V <- U
+  for(i in 1:length(U)){
+    if ((li < U[i]) & (U[i] <ui)){
+    V[i] <- li +(1-(U[i]-li)/(ui-li))*(ui-li)
+    } else{
+      V[i] <- U[i]
+    } 
+  }
+  B1X <- qbeta(U,a,b)
+  B1Y <- qbeta(V,a,b)
+  
+  B2 <- rbeta(n, a,b)
+  X <- 16*B2*B1X*X0*(1-X0)*(1-4*B1X*X0*(1-X0))
+  Y <- 16*B2*B1Y*Y0*(1-Y0)*(1-4*B1Y*Y0*(1-Y0))
+  
+  mean((X-Y)^2)
+}
+```
+
+```{r}
+minDiff <- 1:10
+crnDiff <- 1:10
+n <- 10^4
+for(alpha in 1:10){
+  crnDiff[alpha] <- getExpDist_CRN(n, alpha, X0,Y0)
+  minDiff[alpha] <- getExpDist_min(n, alpha, X0,Y0)
+}
+
+df <- data.frame(alpha = 1:10,min = minDiff, CRN = crnDiff)
+df
+```
+```{r}
+# save(df, file = "df_CRNvsmin.RData")
+```
+
+```{r}
+load("df_CRNvsmin.RData")
+```
+
+```{r}
+df %>% mutate(a1 = 1/(8*X0*(1-X0)),
+  a2 = 1/(8*Y0*(1-Y0)),
+  li = pbeta(min(a1,a2),a,b),
+  ui =pbeta(min(1,max(a1,a2)),a,b))
+```
+
+
+```{r}
+df %>% 
+  pivot_longer(min:CRN, names_to='distribution', values_to='val') %>% 
+  ggplot(aes(x = alpha, y = val)) + 
+  geom_line(aes(color = distribution)) +
+  theme_bw() + theme(legend.position= 'bottom') +
+  ylab(TeX("$E[(X_2-X'_2)^2]$"))  +
+  scale_color_manual(labels = c("CRN", "Tighter Wass bound"), values = c("blue", "red")) 
+```
+
+```{r}
+# alpha_values <- c(0.6, 1, 2, 3)
+# df_all <- data.frame()
+# 
+# for (alpha in alpha_values) {
+#   a <- alpha + 1/2
+#   b <- alpha - 1/2
+#   n <- 10000 # no of simulations
+#   m <- 1000  # no of iterations
+#   X <- 1:m
+#   Y <- 1:m
+#   X[1] <- X0
+#   Y[1] <- Y0
+#   df <- data.frame(X=c(), Y=c(), it=c(), sim_no=c())
+#   
+#   for (j in 1:n) {
+#     B <- rbeta(m, a, b)
+#     X[1] <- X0
+#     Y[1] <- Y0
+#     for (i in 2:m) {
+#       X[i] <- 4*B[i]*X[i-1]*(1-X[i-1])
+#       Y[i] <- 4*B[i]*Y[i-1]*(1-Y[i-1])
+#     }
+#     df <- rbind(df, data.frame(X, Y, it=1:m, sim_no=j))
+#   }
+#   
+#   df$alpha <- alpha  # tag each result with its alpha value
+#   df_all <- rbind(df_all, df)
+# }
+```
+
+```{r}
+# save(df_all, file = "df_ranlogcrn.RData")
+```
+
+```{r}
+#load("df_ranlogcrn.RData")
+# df_plot <- df_all %>%
+#   group_by(alpha, it) %>%
+#   filter(it>2) %>% 
+#   summarise(mean_val = mean(abs(X - Y)), .groups = "drop")
+
+# Create named color vector based on alpha
+library(scales)
+
+alpha_vals <- sort(unique(df_plot$alpha))
+alpha_colors <- ifelse(alpha_vals < 1.5, "black", "red")
+names(alpha_colors) <- alpha_vals
+
+df_plot %>%
+  ggplot(aes(x = it, y = mean_val,
+             linetype = factor(alpha),
+             color = factor(alpha))) +
+  
+  geom_line(linewidth = 1) +
+  
+  scale_color_manual(
+    values = alpha_colors,
+    name = TeX("$\\alpha$")
+  ) +
+  
+  scale_linetype_discrete(name = TeX("$\\alpha$")) +
+  
+  labs(
+    x = TeX("Iteration $n$"),
+    y = TeX("$|X_n - X'_n|$")
+  ) +
+  
+  theme_bw(base_size = 13) +
+  theme(
+    legend.position = "bottom",
+    legend.title = element_text(size = 12),
+    legend.text = element_text(size = 11),
+    axis.title = element_text(size = 13),
+    axis.text = element_text(size = 11),
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_line(linewidth = 0.3)
+  )
+```
+```{r}
+df_all %>% 
+  filter(sim_no<4, it>900) %>% 
+  ggplot(aes(x = it, y = X,  col = factor(sim_no))) +
+  geom_line(alpha = 0.4, linewidth = 0.4) + 
+   facet_wrap(~ alpha, scales = "free_y")
+```
+```{r}
+alpha <- 0.6
+# 
+#   a <- alpha + 1/2
+#   b <- alpha - 1/2
+#   n <- 1000 # no of simulations
+#   m <- 100000  # no of iterations
+#   X <- 1:m
+#   Y <- 1:m
+#   X[1] <- X0
+#   Y[1] <- Y0
+#   df_06 <- data.frame(X=c(), Y=c(), it=c(), sim_no=c())
+#   
+#   for (j in 1:n) {
+#     B <- rbeta(m, a, b)
+#     X[1] <- X0
+#     Y[1] <- Y0
+#     for (i in 2:m) {
+#       X[i] <- 4*B[i]*X[i-1]*(1-X[i-1])
+#       Y[i] <- 4*B[i]*Y[i-1]*(1-Y[i-1])
+#     }
+#     df_06 <- rbind(df_06, data.frame(X, Y, it=1:m, sim_no=j))
+#   }
+```
+
+```{r}
+# df_06_mean <- df_06 %>%
+#   group_by(it) %>%
+#   summarise(mean_val = mean(abs(X - Y)), .groups = "drop")
+```
+
+```{r}
+save(df_06_mean, file = "df_06_ranlogcrn.RData")
+```
+
+```{r}
+df_06_mean %>% 
+  filter(it == 100000 | it == 100)
+```
+
+```{r}
+load("df_06_ranlogcrn.RData")
+df_plot <- df_06_mean %>% 
+  filter(it>2) 
+
+df_plot %>%
+  ggplot(aes(x = it, y = mean_val)) +
+  
+  geom_line(linewidth = 1) 
+```
+
+
+```{r}
+# df_ranlog_crn <- df
+# save(df_ranlog_crn, file = "df_ranlogcrn.RData")
+```
+
+```{r}
+load("df_ranlogcrn.RData")
+```
+
+
+```{r}
+df_ranlog_crn %>% 
+  group_by(it) %>% 
+  summarise(mean_val=mean(abs(X-Y))) %>% 
+  ggplot(aes(x = it)) + 
+  geom_line(aes(y = mean_val)) +
+  theme(legend.position = "none") + 
+  theme_bw(base_size = 13) +
+  #labs(title = TeX("Value of $||(\\theta_n,\\mu_n,A_n)-(\\theta'_n,\\mu'_n,A'_n)||_1$"), subtitle = "Based on 1000 simulations") +
+  xlab("n=iteration") + ylab(TeX("$|X_n-X'_n|$"))
+```
+# Zeno's walk
+```{r}
+f_plus <- function(x){
+  if(x <= -2){y=x+2}
+  if(-2 <= x & x <= 0){y=x/2+1}
+  if(0<=x){y=x+1}
+  return(y)
+}
+
+f_minus <- function(x){
+  if(x<=0){y=x-1}
+  if(0<=x & x <=2){y=x/2-1}
+  if(2<=x){y=x-2}
+  return(y)
+}
+```
+
+```{r}
+n <- 100
+X <- 1:n
+Y <- 1:n
+X[1] <- 0
+Y[1] <- 100
+for(i in 2:n){
+  r <- 0.5
+  B <- rbernoulli(1,r)
+  X[i] <- B*f_plus(X[i-1])+(1-B)*f_minus(X[i-1])
+  Y[i] <- B*f_plus(Y[i-1])+(1-B)*f_minus(Y[i-1])
+}
+```
+
+```{r}
+# Simulate CRN over 1000 iterations
+n <- 1000 # no of simulations
+m <- 500 # no of iterations
+X <- 1:m
+Y <- 1:m
+X0 <- 0
+Y0 <- 100
+X[1] <- X0
+Y[1] <- Y0
+R <- c(0.1,0.33,0.5)
+df <- data.frame(X=c(),Y=c(), it =c(), sim_no=c(), r=c())
+for (r in R){
+    for (j in 1:n){
+    B <- rbernoulli(m,r)
+    X[1] <- X0
+    Y[1] <- Y0
+    for (i in 2:m){
+      X[i] <- B[i]*f_plus(X[i-1])+(1-B[i])*f_minus(X[i-1])
+      Y[i] <- B[i]*f_plus(Y[i-1])+(1-B[i])*f_minus(Y[i-1])
+    }
+    df <- rbind(df, data.frame(X,Y, it = 1:m, sim_no=j, r))
+  }
+}
+
+df
+df %>%
+  group_by(it) %>%
+  summarise(mean(abs(X-Y)))
+```
+```{r}
+df_zenocrn %>% distinct(r)
+```
+
+```{r}
+ df_zenocrn <- df
+# save(df_zenocrn, file = "df_zenocrn.RData")
+```
+
+```{r}
+load("df_zenocrn.RData")
+```
+
+```{r}
+df_zenocrn %>% 
+  group_by(it,r) %>% 
+  filter(it<500) %>% 
+  summarise(mean_val=mean(abs(X-Y)))
+```
+
+```{r}
+df_zenocrn %>% 
+  group_by(it,r) %>% 
+  filter(it<500) %>% 
+  summarise(mean_val=mean(abs(X-Y))) %>% 
+  ggplot(aes(x = it)) + 
+  geom_line(aes(y = mean_val, col = as.character(r))) +
+  theme(legend.position = "none") + 
+  theme_bw(base_size = 13) +
+  #labs(title = TeX("Value of $||(\\theta_n,\\mu_n,A_n)-(\\theta'_n,\\mu'_n,A'_n)||_1$"), subtitle = "Based on 1000 simulations") +
+  xlab("n=iteration") + ylab(TeX("$|X_n-X'_n|$"))
+```
+```{r}
+df_zenocrn %>% 
+  group_by(it, r) %>% 
+  filter(it < 500) %>% 
+  summarise(mean_val = mean(abs(X - Y)), .groups = "drop") %>% 
+  ggplot(aes(x = it, y = mean_val,
+             colour = factor(r),
+             linetype = factor(r))) + 
+  geom_line(linewidth = 1) +
+  scale_colour_manual(
+    name = "r",
+    values = c(
+      "0.1"  = "black",
+      "0.33" = "black",  # 1/3
+      "0.5"  = "red"
+    ),
+    labels = c(
+      "0.1" = "0.1",
+      "0.33" = "1/3",
+      "0.5" = "0.5"
+    )
+  ) +
+  scale_linetype_manual(
+    name = "r",
+    values = c(
+      "0.1"  = "solid",
+      "0.33" = "dotted",
+      "0.5"  = "solid"
+    ),
+    labels = c(
+      "0.1" = "0.1",
+      "0.33" = "1/3",
+      "0.5" = "0.5"
+    )
+  ) +
+  labs(
+    x = "Iteration (n)",
+    y = TeX("$|X_n - X'_n|$")
+  ) +
+  theme_bw(base_size = 14) +
+  theme(
+    legend.position = "bottom",
+    legend.title = element_text(size = 13),
+    legend.text = element_text(size = 12),
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_line(linewidth = 0.2)
+  )
+```
+
+```{r}
+f_plus <- function(x) {
+  ifelse(
+    x >= 0, x + 1,
+    ifelse(x >= -2, x/2 + 1, x + 2)
+  )
+}
+
+f_minus <- function(x) {
+  ifelse(
+    x <= 0, x - 1,
+    ifelse(x <= 2, x/2 - 1, x - 2)
+  )
+}
+
+```
+
+```{r}
+x <- seq(-4, 4, length.out = 1000)
+
+plot(
+  x, f_plus(x),
+  type = "l",
+  lwd  = 2,
+  col  = "black",
+  xlab = "x",
+  ylab = "f(x)",
+  ylim = range(c(f_plus(x), f_minus(x)))
+)
+
+lines(
+  x, f_minus(x),
+  lwd = 2,
+  lty = 2
+)
+
+abline(v = c(-2, 0, 2), lty = 3, col = "gray70")
+
+legend(
+  "topleft",
+  legend = c(expression(f^"+(x)"), expression(f^"-(x)")),
+  lwd    = 2,
+  lty    = c(1, 2),
+  bty    = "n"
+)
+
+points(c(-2, 0), f_plus(c(-2, 0)), pch = 16)
+points(c(0, 2),  f_minus(c(0, 2)),  pch = 16)
+```
+
+# Dirichlet process 
+```{r}
+n <- 10
+X <- 1:n
+Y <- (1:n)+10
+
+f_dirichlet <- function(x, b, a){
+  return((1-b)*a+b*x)
+}
+
+for(i in 2:n){
+  B <- rbeta(n,2,1)
+  A <- rnorm(n)
+  X[i] <- f_dirichlet(X[i-1],B[i], A[i])
+  Y[i] <- f_dirichlet(Y[i-1],B[i], A[i])
+}
+
+plot(X-Y)
+```
+```{r}
+one_run_crn <- function(n, a, b) {
+
+  X <- numeric(n)
+  Y <- numeric(n)
+
+  X[1] <- 1
+  Y[1] <- 110
+
+  # U <- runif(n)
+  # A <- rnorm(n)
+
+  for (i in 2:n) {
+    X[i] <- f_dirichlet(X[i-1], qbeta(U[i], a, b), A[i])
+    Y[i] <- f_dirichlet(Y[i-1], qbeta(U[i], a, b), A[i])
+  }
+
+  abs(X - Y)
+}
+
+one_run_alt <- function(n, a, b) {
+
+  X <- numeric(n)
+  Y <- numeric(n)
+
+  X[1] <- 1
+  Y[1] <- 110
+
+  # U <- runif(n)
+  # A <- rnorm(n)
+
+  for (i in 2:n) {
+
+    u_x <- U[i] + (X[i-1] - A[i] < 0) * (1 - 2 * U[i])
+    b_x <- qbeta(u_x, a, b)
+    X[i] <- f_dirichlet(X[i-1], b_x, A[i])
+
+    u_y <- U[i] + (Y[i-1] - A[i] < 0) * (1 - 2 * U[i])
+    b_y <- qbeta(u_y, a, b)
+    Y[i] <- f_dirichlet(Y[i-1], b_y, A[i])
+  }
+  abs(X - Y)
+}
+
+```
+
+```{r}
+n     <- 10
+a     <- 2
+b     <- 1
+n_sim <- 1
+
+diff_mat <- replicate(
+  n_sim,
+  one_run_alt(n, a, b)
+)
+
+mean_diff_alt <- rowMeans(diff_mat)
+
+diff_mat <- replicate(
+  n_sim,
+  one_run_crn(n, a, b)
+)
+
+mean_diff_crn <- rowMeans(diff_mat)
+```
+
+```{r}
+plot(
+  1:n, mean_diff_alt,
+  type = "l",
+  lwd  = 2,
+  xlab = "t",
+  ylab = expression("E[|X[t] - Y[t]|]")
+)
+
+lines(mean_diff_crn, lty = 2, col="red")
+```
+
+# Non linear function
+```{r}
+simulate_crn_df <- function(M = 1000, n = 10, 
+                            x0 = 0, y0 = 2,
+                            sd_z = 1) {
+  
+  # Storage
+  X <- matrix(0, nrow = M, ncol = n + 1)
+  Y <- matrix(0, nrow = M, ncol = n + 1)
+  
+  # Initial values
+  X[, 1] <- x0
+  Y[, 1] <- y0
+  
+  # Iterate
+  for (k in 1:n) {
+    
+    # Common random numbers
+    Z <- rnorm(M, mean = 0, sd = sd_z)
+    
+    # Updates
+    X[, k + 1] <- (sin(X[, k])) + Z
+    Y[, k + 1] <- (sin(Y[, k])) + Z
+  }
+  
+  # Convert to tidy data frame
+  df <- data.frame(
+    chain = rep(1:M, each = n + 1),
+    iteration = rep(0:n, times = M),
+    X = as.vector(t(X)),
+    Y = as.vector(t(Y))
+  )
+  
+  df$abs_diff <- abs(df$X - df$Y)
+  
+  return(df)
+}
+```
+
+```{r}
+
+df_sim <- simulate_crn_df(M = 1000, n = 10000, x0 = 0, y0 = 3, sd_z = 1)
+
+# Compute expected CRN distance at each step
+
+```
+```{r}
+sim
+```
+```{r}
+df_sim %>%
+  filter(iteration == 10000) %>% 
+  ggplot() +
+  geom_histogram(aes(x = X, y = ..density..),
+                 bins = 50,
+                 fill = "black",
+                 alpha = 0.4) +
+  geom_histogram(aes(x = Y, y = ..density..),
+                 bins = 50,
+                 fill = "red",
+                 alpha = 0.4) +
+  labs(
+    x = expression(X[100] ~ "and" ~ Y[100]),
+    y = "Density"
+  ) +
+  theme_bw(base_size = 14) +
+  theme(
+    legend.position = "none",
+    panel.grid.minor = element_blank()
+  )
+```
+
